@@ -1,4 +1,4 @@
-# 🐱 Animal Classification Model
+# 🐱 Animal Classification Model With Data Augmentation
 
 A deep learning project for classifying images of cats and dogs using a Convolutional Neural Network (CNN) implemented with TensorFlow.
 
