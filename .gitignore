@@ -2,3 +2,4 @@ cats_and_dogs_filtered/
 PetImages/
 visualisation/
 model_dir/
+.DS_Store
