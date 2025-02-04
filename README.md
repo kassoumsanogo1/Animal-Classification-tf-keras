@@ -24,18 +24,31 @@ This project downloads, prepares and augments image datasets, builds a CNN model
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd Animal_classification_model
+   git clone https://github.com/kassoumsanogo1/Animal-Classification-tf-keras.git
    ```
 2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use venv\Scripts\activate
+   source venv/bin/activate  # On Mac
+   source venv\Scripts\activate # On Windows
    ```
 3. Install the required packages:
    ```bash
    pip install tensorflow numpy matplotlib
    ```
+4. Code to download Small DataSet
+   ```python
+    import tensorflow as tf
+    _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
+    zip_dir = tf.keras.utils.get_file('cats_and_dogs_filtered.zip', origin=_URL, extract=True)
+    print("Path to dataset files:", zip_dir)
+    ```
+5. Code to download Big Dataset
+    ```python
+    import kagglehub
+    path = kagglehub.dataset_download("bhavikjikadara/dog-and-cat-classification-dataset")
+    print("Path to dataset files:", path)
+    ```
 
 ## Usage 🚀
 
@@ -43,6 +56,12 @@ Run the training script:
 ```bash
 python train.py
 ```
+
+To Test your Model:
+```bash
+python main_use_model.py
+```
+
 The script will:
 - Download and prepare the dataset.
 - Create augmented image generators.
@@ -51,8 +70,6 @@ The script will:
 - Plot the training and validation accuracy and loss.
 
 ## Training Curve 📈
-
-Add your training curve image below:
 
 ![Training Curve](training_curves/Figure_3.png)  <!-- Replace with your image path -->
 
