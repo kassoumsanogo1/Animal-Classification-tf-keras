@@ -62,7 +62,7 @@ Adjust training parameters such as batch size, epochs, or image size by modifyin
 
 ## License 📜
 
-Specify your project's license here.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact 📞
 
